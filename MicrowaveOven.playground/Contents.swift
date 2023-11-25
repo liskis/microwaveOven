@@ -28,7 +28,7 @@ class MicrowaveOven {
             }
         case .w200:
             if self.setTime > maxTimeW200{
-                print("温め時間は\(maxTimeW100)秒以下でお願いします。")
+                print("温め時間は\(maxTimeW200)秒以下でお願いします。")
                 return false
             }
         case .w500:
