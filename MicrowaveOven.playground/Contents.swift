@@ -22,25 +22,24 @@ class MicrowaveOven {
         self.setTime = setTime
         switch power {
         case .w100:
-            if self.setTime >= maxTimeW100{
-                print("温め時間は\(maxTimeW100)以下でお願いします。")
+            if self.setTime > maxTimeW100{
+                print("温め時間は\(maxTimeW100)秒以下でお願いします。")
                 return false
             }
         case .w200:
-            if self.setTime >= maxTimeW200{
-                print("温め時間は\(maxTimeW100)以下でお願いします。")
+            if self.setTime > maxTimeW200{
+                print("温め時間は\(maxTimeW100)秒以下でお願いします。")
                 return false
             }
         case .w500:
-            if self.setTime >= maxTimeW500{
-                print("温め時間は\(maxTimeW100)秒以下でお願いします。")
+            if self.setTime > maxTimeW500{
+                print("温め時間は\(maxTimeW500)秒以下でお願いします。")
                 return false
             }
         }
         print("あっためます。")
         startTimer()
         return true
-        
     }
     
     func startTimer(){
@@ -64,5 +63,5 @@ class MicrowaveOven {
 }
 
 let microwaveOven = MicrowaveOven()
-let warmStart = microwaveOven.start(power: .w500, setTime: 800)
+let warmStart = microwaveOven.start(power: .w100, setTime: 1201)
 print(warmStart)
